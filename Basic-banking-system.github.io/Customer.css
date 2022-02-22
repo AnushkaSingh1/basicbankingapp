@@ -65,3 +65,18 @@ background-color:rgb(235, 235, 245);
 .btn-info:hover{
     background-color: rgb(64, 64, 68)!important;
 } 
+table, th, td {
+    border: 1px solid;
+    
+    
+  }
+  th {
+    background-color: #2b3c47;
+    color: white;
+  }
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
+  tr:hover {background-color: coral;}
+  tr:nth-child(even) {background-color: #f2f2f2;}
