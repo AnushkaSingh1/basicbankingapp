@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Form </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="center">
+      <h2>WELCOME TO ALL CITIZENS BANK</h2>
+      <img src="C:\Users\Sid\Desktop\bank\Bank.gif" width="70" 
+      height="70"/>
+      <style>
+        div {
+          text-align: center;
+           
+        }
+      </style>
+      <h1>Login</h1>
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" id="username" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="password"  required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <input type="submit" value="Login" onclick="validate()">
+        </div>
+      </form>
+    </div>
+
+  </body>
+  <script>
+    var attempt=3;
+    function validate(){
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      if(username=="Bank" && password=="Password"){
+        alert("log in successful");
+        window.location.assign("C:\Users\Sid\Desktop\Final Project\home.html")
+        return false;
+      }
+      else{
+        attempt--;
+        alert(" you have  "  +attempt+  " attempts left");
+        if(attempt==0)
+        {
+          document.getElementById("username").disabled = true;
+          document.getElementById("password").disabled = true;
+          document.getElementById("submit").disabled = true;
+          return false;
+        }
+      }
+    }
+  </script>
+</html>
